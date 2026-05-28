@@ -744,7 +744,7 @@ const grid = document.getElementById('galleryGrid');
 let activeFilter = 'all';
 let currentIndex = 0;
 
-function buildgallery(filter) {
+function buildGallery(filter) {
   grid.innerHTML = '';
   const visible = photos.filter(p => filter === 'all' || p.category === filter);
   visible.forEach((photo, i) => {
@@ -771,7 +771,7 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     activeFilter = btn.dataset.filter;
-    buildgallery(activeFilter);
+    buildGallery(activeFilter);
   });
 });
 
@@ -859,7 +859,7 @@ function handleSubmit(e) {
 }
 
 // Init
-buildgallery('all');
+buildGallery('all');
 </script>
 </body>
 </html>
