@@ -785,6 +785,12 @@ const io = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 // Init
+ // Disable right click on images
+document.addEventListener('contextmenu', e => {
+  if (e.target.tagName === 'IMG') {
+    e.preventDefault();
+  }
+});
 buildGallery('all');
 </script>
 </body>
