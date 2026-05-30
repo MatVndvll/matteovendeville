@@ -51,7 +51,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: 40px;
+  padding: 8px;
   flex-direction: column;
   gap: 30px;
   justify-content: center;
@@ -274,7 +274,7 @@
     gap: 2rem;
     align-items: center;
   }
-  .nav-hamburger { display: block !important; }
+.nav-hamburger { display: flex !important; }
 }
 
   .gallery-item {
@@ -600,7 +600,11 @@
     Mattéo Vendeville
     <span>Light Hunter</span>
   </a>
- <button class="nav-hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+ <button class="nav-hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
   <ul class="nav-links">
     <li><a href="#gallery">gallery</a></li>
     <li><a href="#about">about</a></li>
